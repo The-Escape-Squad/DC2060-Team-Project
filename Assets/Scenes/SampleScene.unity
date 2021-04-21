@@ -976,6 +976,7 @@ MonoBehaviour:
   inventoryAudioSource: {fileID: 908830716}
   tooltipTitle: {fileID: 264942463}
   tooltipDescription: {fileID: 1138349401}
+  testItem: {fileID: 11400000, guid: 37419d45819e449c69257ca01d661872, type: 2}
   inventoryOpenSound: {fileID: 8300000, guid: a976b98a983a74dc2acbd908baced58a, type: 3}
   inventoryCloseSound: {fileID: 8300000, guid: b16b1961ff8d44a479ec97304bc045b2, type: 3}
 --- !u!82 &908830716
