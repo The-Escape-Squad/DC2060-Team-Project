@@ -10,6 +10,7 @@ public class InventorySlot : MonoBehaviour, IPointerExitHandler, IPointerEnterHa
     [Header("References")]
     private Inventory inventory;
     public Image itemSlot;
+    public Image selectedIndicator;
     private ItemSO myItem;
 
     public void Init(Inventory inventory)
@@ -17,12 +18,22 @@ public class InventorySlot : MonoBehaviour, IPointerExitHandler, IPointerEnterHa
         this.inventory = inventory;
         itemSlot.sprite = null;
         myItem = null;
+        selectedIndicator.enabled = false;
     }
 
     public void UpdateItem(ItemSO newItem)
     {
         myItem = newItem;
-        itemSlot.sprite = (myItem == null) ? null : myItem.itemGraphic;
+        if(myItem)
+        {
+            itemSlot.sprite = myItem.itemGraphic;
+            itemSlot.enabled = true;
+        } else
+        {
+            itemSlot.sprite = null;
+            itemSlot.enabled = false;
+        }
+        
     }
 
     public bool IsEmpty()
@@ -59,11 +70,13 @@ public class InventorySlot : MonoBehaviour, IPointerExitHandler, IPointerEnterHa
         {
             inventory.UpdateTooltip("No Item");
         }
+        selectedIndicator.enabled = true;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         inventory.UpdateTooltip("Tooltip");
+        selectedIndicator.enabled = false;
     }
 
 }
