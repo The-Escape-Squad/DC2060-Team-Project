@@ -157,11 +157,11 @@ public class WordsGrid : MonoBehaviour
         startPosition.y = midHeightPosition;
 
         // check if grid is still in screen
-        return startPosition.x < GetHelfScreenWidth() * -1 || startPosition.y > topPosition;
+        return startPosition.x < GetHalfScreenWidth() * -1 || startPosition.y > topPosition;
 
     }
 
-    private float GetHelfScreenWidth()
+    private float GetHalfScreenWidth()
     {
         float height = Camera.main.orthographicSize * 2;
         float width = (1.7f * height) * Screen.width / Screen.height;

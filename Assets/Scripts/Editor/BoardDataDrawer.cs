@@ -6,10 +6,12 @@ using UnityEditor;
 using UnityEditorInternal;
 
 [CustomEditor(typeof(BoardData), false)]
+// edit seperate puzzles - more reusable
 [CanEditMultipleObjects]
 [System.Serializable]
 public class BoardDataDrawer : Editor
 {
+    // to get the wordsearch 
     private BoardData GameDataInstance => target as BoardData;
     private ReorderableList dataList;
 
@@ -18,7 +20,7 @@ public class BoardDataDrawer : Editor
         InitializeReordableList(ref dataList, "SearchWords", "Searching Words");
     }
 
-    //to override the wordsearch look
+    // to override the wordsearch look in the editor
     public override void OnInspectorGUI()
     {
         serializedObject.Update();
@@ -40,6 +42,7 @@ public class BoardDataDrawer : Editor
         EditorGUILayout.Space();
         dataList.DoLayoutList();
 
+        // will keep any changes made to it after game stops playing
         serializedObject.ApplyModifiedProperties();
         if (GUI.changed)
         {
@@ -47,6 +50,7 @@ public class BoardDataDrawer : Editor
         }
     }
 
+    // make sure all the rows and columns are created based on input
     private void DrawColumnsRowsInputFields()
     {
         var columnsTemp = GameDataInstance.Columns;
@@ -124,7 +128,7 @@ public class BoardDataDrawer : Editor
             EditorGUI.LabelField(rect, listLabel);
         };
 
-        //cannot pass reference to lambda function unless make copy of it
+        //cannot pass reference to lambda function unless make copy of list
         var l = list;
 
         list.drawElementCallback = (Rect rect, int index, bool isActive, bool isFocused) =>

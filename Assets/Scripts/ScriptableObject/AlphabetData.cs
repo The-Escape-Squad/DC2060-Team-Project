@@ -12,7 +12,8 @@ public class AlphabetData : ScriptableObject
         public string letter;
         public Sprite image;
     }
-
+    
+    // the letter graphics 
     public List<LetterData> AlphabetPlain = new List<LetterData>();
     public List<LetterData> AlphabetNormal = new List<LetterData>();
     public List<LetterData> AlphabetHighlighted = new List<LetterData>();

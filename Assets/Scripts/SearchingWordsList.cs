@@ -5,7 +5,7 @@ using UnityEngine;
 public class SearchingWordsList : MonoBehaviour
 {
 
-    /*public GameData currentGameData;
+    public GameData currentGameData;
     public GameObject searchingWordPrefab;
     public float offset = 0.0f;
     public int maxColumns = 5;
@@ -75,6 +75,7 @@ public class SearchingWordsList : MonoBehaviour
             _words[index].transform.SetParent(this.transform);
             _words[index].GetComponent<RectTransform>().localScale = squareScale;
             _words[index].GetComponent<RectTransform>().localPosition = new Vector3(0f, 0f, 0f);
+
         }
     }
 
@@ -87,6 +88,7 @@ public class SearchingWordsList : MonoBehaviour
         {
             finalScale.x -= adjustment;
             finalScale.y -= adjustment;
+
             if(finalScale.x <= 0 || finalScale.y <= 0)
             {
                 finalScale.x = adjustment;
@@ -98,7 +100,7 @@ public class SearchingWordsList : MonoBehaviour
 
         return finalScale;
     } 
-
+   
     private bool ShouldScaleDown(Vector3 targetScale)
     {
         var squareRect = searchingWordPrefab.GetComponent<RectTransform>();
@@ -124,10 +126,13 @@ public class SearchingWordsList : MonoBehaviour
             var totalSquareWidth = squareSize.x * _columns;
 
             if (totalSquareWidth > paremtRect.rect.width)
+            {
                 return true;
+            }
 
             return false;
         }
+        return false;
     } 
 
     private void SetWordsPosition()
@@ -179,5 +184,5 @@ public class SearchingWordsList : MonoBehaviour
         startPosition.y = (parentRect.rect.height - sqaureSize.y) / 2;
 
         return startPosition;
-    }*/
+    }
 }

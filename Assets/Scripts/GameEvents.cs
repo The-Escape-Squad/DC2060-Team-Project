@@ -52,4 +52,16 @@ public static class GameEvents
         if (OnClearSelection != null)
             OnClearSelection();
     }
+
+    public delegate void CorrectWord(string word, List<int> squareIndexes);
+
+    public static event CorrectWord OnCorrectWord;
+
+    public static void CorrectWordMethod(string word, List<int> squareIndexes)
+    {
+        if(OnCorrectWord != null)
+        {
+            OnCorrectWord(word, squareIndexes);
+        }
+    }
 }

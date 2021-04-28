@@ -33,6 +33,7 @@ public class AlphabetDataDrawer : Editor
         serializedObject.ApplyModifiedProperties();
     }
 
+    // fit in the game screen
     private void InitializeReorderableList(ref ReorderableList list, string propertyName, string listLabel)
     {
         list = new ReorderableList(serializedObject, serializedObject.FindProperty(propertyName), 
@@ -54,7 +55,7 @@ public class AlphabetDataDrawer : Editor
                 new Rect(rect.x, rect.y, 60, EditorGUIUtility.singleLineHeight),
                 element.FindPropertyRelative("letter"), GUIContent.none);
 
-            // change if for look and fell
+            // change for look and feel if it's not fitting in the game screen
             EditorGUI.PropertyField(
                 new Rect(rect.x + 70, rect.y, rect.width - 60 - 30, EditorGUIUtility.singleLineHeight),
                  element.FindPropertyRelative("image"), GUIContent.none);

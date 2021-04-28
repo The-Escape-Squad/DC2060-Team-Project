@@ -6,6 +6,5 @@ using UnityEngine;
 [CreateAssetMenu]
 public class GameData : ScriptableObject
 {
-    public string selectedCategoryName;
     public BoardData selectedBoardData;
 }

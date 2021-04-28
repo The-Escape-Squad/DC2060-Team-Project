@@ -4,6 +4,7 @@ using UnityEngine;
 
 [System.Serializable]
 [CreateAssetMenu]
+// data for game
 public class BoardData : ScriptableObject
 {
     [System.Serializable]
@@ -40,8 +41,9 @@ public class BoardData : ScriptableObject
             }
         }
     }
-
+    // to have the game timed at a future date - out of scope for Dev-12
     public float timeInSeconds;
+
     public int Columns = 0;
     public int Rows = 0;
 

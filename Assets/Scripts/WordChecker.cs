@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
 
 public class WordChecker : MonoBehaviour
 {
@@ -38,7 +39,6 @@ public class WordChecker : MonoBehaviour
     {
         _assignedPoints = 0;
         _completedWords = 0;
-
     }
 
     void Update()
@@ -58,7 +58,14 @@ public class WordChecker : MonoBehaviour
 
     private void SquareSelected(string letter, Vector3 squarePosition, int squareIndex)
     {
-        if(_assignedPoints == 0)
+        Debug.Log(_word);
+        if (_word == "PILLO")
+        {
+            Debug.Log("its working");
+            SceneManager.LoadScene("SampleScene");
+        }
+
+        if (_assignedPoints == 0)
         {
             _rayStartPosition = squarePosition;
             _correctSquareList.Add(squareIndex);
@@ -102,6 +109,7 @@ public class WordChecker : MonoBehaviour
             if (_word == searchingWord.Word)
             {
                 _word = string.Empty;
+                _correctSquareList.Clear();
                 return;
             }
         }
