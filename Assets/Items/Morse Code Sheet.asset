@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c7593cef1ddf4b76a818282d655d85d, type: 3}
+  m_Script: {fileID: 11500000, guid: 374aa68e6d3fb45749ec2970d3b7aef7, type: 3}
   m_Name: Morse Code Sheet
   m_EditorClassIdentifier: 
   itemName: Note
   itemDescription: A note with what looks like a morse code alphabet... Interesting
   itemGraphic: {fileID: 21300000, guid: 2732af51ae013455188676f59dd6b657, type: 3}
+  viewScreenTag: Note

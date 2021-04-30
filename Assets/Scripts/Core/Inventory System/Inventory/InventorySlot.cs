@@ -53,9 +53,10 @@ public class InventorySlot : MonoBehaviour, IPointerExitHandler, IPointerEnterHa
 
         if(myItem != null)
         {
-            Debug.Log("Used Item: " + myItem.itemName);
-            UpdateItem(null);
-            inventory.UpdateTooltip("No Item");
+            if(myItem is ViewableItemSO viewItem) {
+                GameObject.FindGameObjectWithTag(viewItem.viewScreenTag).GetComponent<Canvas>().enabled = true;
+                inventory.ToggleState();
+            }
         } else
         {
             Debug.Log("There's no item to use here...");

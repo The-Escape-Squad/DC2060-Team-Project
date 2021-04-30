@@ -68,12 +68,9 @@ public class Inventory : MonoBehaviour
             if(slots[i].IsEmpty())
             {
                 slots[i].UpdateItem(item);
-                //return i;
                 break;
             }
         }
-
-        //return -1;
     }
 
     public int HasItem(ItemSO item)
