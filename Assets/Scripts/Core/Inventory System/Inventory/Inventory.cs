@@ -61,18 +61,19 @@ public class Inventory : MonoBehaviour
     /// </summary>
     /// <param name="item"></param>
     /// <returns></returns>
-    public int AddItem(ItemSO item)
+    public void AddItem(ItemSO item)
     {
         for(int i = 0; i < slots.Length; i++)
         {
             if(slots[i].IsEmpty())
             {
                 slots[i].UpdateItem(item);
-                return i;
+                //return i;
+                break;
             }
         }
 
-        return -1;
+        //return -1;
     }
 
     public int HasItem(ItemSO item)

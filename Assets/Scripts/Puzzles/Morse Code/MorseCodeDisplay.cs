@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MorseCodeMetaData
+public class MorseCodeData
 {
     public enum eOnType
     {
@@ -16,21 +16,24 @@ public class MorseCodeMetaData
         eLongSpace  = -7         //Time Between different letters / words
     }
 
-    public static float fTimeUnit = 0.5f;  //1 dot is set to half second
+    public static float fTimeUnit = 0.25f;  // The time value for a dot in morse code
 }
 
-public class MorseCodeManager : MonoBehaviour
+public class MorseCodeDisplay : MonoBehaviour
 {
-    static MorseCodeManager m_Instance;
 
-    public static MorseCodeManager GetInstance() { return m_Instance; }
+    public SpriteRenderer m_light;
+    public List<int> morseSentence = new List<int>();
 
-    void Start()
+    public Color onColour;
+    public Color offColour;
+
+    public void Start()
     {
-        m_Instance = this;
+        StartCoroutine(DisplayMorseSentence(morseSentence));
     }
 
-    public IEnumerator ProcessMorseSentence(GameObject obj, List<int> morseString)
+    public IEnumerator DisplayMorseSentence(List<int> morseString)
     {
         Debug.Log("Morse Processing started,sentence size is " + morseString.Count);
 
@@ -41,16 +44,16 @@ public class MorseCodeManager : MonoBehaviour
             {
                 //Positive Morse 
                 
-                obj.SetActive(true);
+                m_light.color = onColour;
                 Debug.Log("morse letter is " + morseString[i]);
                 //Either dot or dash turning on light object per unit time
                 //Turning on light for x amount of time (eOnType * fUnit)
-                yield return new WaitForSeconds(Mathf.Abs(morseString[i] * MorseCodeMetaData.fTimeUnit));
+                yield return new WaitForSeconds(Mathf.Abs(morseString[i] * MorseCodeData.fTimeUnit));
                 
                 //Light off between dots/dashes
-                obj.SetActive(false);
+                m_light.color = offColour;
                 Debug.Log("Moving to next letter");
-                yield return new WaitForSeconds(Mathf.Abs((float)MorseCodeMetaData.eOffType.eShortSpace) * MorseCodeMetaData.fTimeUnit);
+                yield return new WaitForSeconds(Mathf.Abs((float)MorseCodeData.eOffType.eShortSpace) * MorseCodeData.fTimeUnit);
             }
 
             if (morseString[i] < 0)
@@ -58,10 +61,13 @@ public class MorseCodeManager : MonoBehaviour
                 //Negative Morse
                 Debug.Log("Blank space");
                 
-                obj.SetActive(false);
+                m_light.color = offColour;
 
-                yield return new WaitForSeconds(Mathf.Abs(morseString[i] * MorseCodeMetaData.fTimeUnit));
+                yield return new WaitForSeconds(Mathf.Abs(morseString[i] * MorseCodeData.fTimeUnit));
             }
         }
+
+        // Play the message again
+        StartCoroutine(DisplayMorseSentence(morseSentence));
     }
 }
