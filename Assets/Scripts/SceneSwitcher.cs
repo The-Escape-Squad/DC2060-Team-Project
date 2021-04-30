@@ -7,6 +7,12 @@ public class SceneSwitcher : MonoBehaviour
     public GameObject[] cameras;
     private int index;
 
+    public void Awake()
+    {
+        index = 0;
+        UpdateCameras();
+    }
+
     public void TurnRight()
     {
         if (index >= cameras.Length-1)
