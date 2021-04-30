@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class WordChecker : MonoBehaviour
 {
@@ -20,6 +20,8 @@ public class WordChecker : MonoBehaviour
     private Ray _currentRay = new Ray();
     private Vector3 _rayStartPosition;
     private List<int> _correctSquareList = new List<int>();
+
+    public UnityEvent onCompletionEvent = new UnityEvent();
 
 
     private void OnEnable()
@@ -61,8 +63,8 @@ public class WordChecker : MonoBehaviour
         Debug.Log(_word);
         if (_word == "PILLO")
         {
-            Debug.Log("its working");
-            SceneManager.LoadScene("SampleScene");
+            Debug.Log("Puzzle Completed");
+            onCompletionEvent?.Invoke();
         }
 
         if (_assignedPoints == 0)
