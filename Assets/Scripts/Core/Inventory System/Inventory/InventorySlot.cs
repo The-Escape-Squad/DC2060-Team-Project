@@ -32,8 +32,12 @@ public class InventorySlot : MonoBehaviour, IPointerExitHandler, IPointerEnterHa
         {
             itemSlot.sprite = null;
             itemSlot.enabled = false;
-        }
-        
+        }   
+    }
+
+    public ItemSO GetItem()
+    {
+        return myItem;
     }
 
     public bool IsEmpty()

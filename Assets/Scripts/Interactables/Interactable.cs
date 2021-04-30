@@ -9,13 +9,20 @@ public class Interactable : MonoBehaviour
     public UnityEvent onInteractEvent = new UnityEvent();
     public bool isInteractable = true;
 
-    public virtual void OnMouseDown()
+    public string interactionMessage;
+
+    public void OnMouseDown()
     {
         if(isInteractable)
         {
-            Debug.Log("You clicked on: " + transform.name);
-            onInteractEvent?.Invoke();
+            OnInteract();
         }
+    }
+
+    protected virtual void OnInteract()
+    {
+        Player.Instance.notificationWindow.DisplayMessage(interactionMessage);
+        onInteractEvent?.Invoke();
     }
 
     public void SetInteractable(bool interactable)

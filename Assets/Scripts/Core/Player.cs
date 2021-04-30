@@ -27,6 +27,8 @@ public class Player : MonoBehaviour
             Destroy(this.gameObject);
         }
         instance = this;
+
+        notificationWindow.DisplayMessage("I'm not guilty, I need to get out of here... But how?");
     }
 
 }

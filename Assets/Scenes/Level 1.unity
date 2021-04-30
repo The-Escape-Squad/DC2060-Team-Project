@@ -262,13 +262,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 188744300}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 168b372a932bd194c87910e1a413d777, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f3172ae0f8524ac5b03824937fe73b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   onInteractEvent:
     m_PersistentCalls:
       m_Calls: []
   isInteractable: 1
+  interactionMessage: There doesn't seem to be anything here...
+  requiredItem: {fileID: 11400000, guid: bf0781002b72a423c91f4bfa07e3220a, type: 2}
+  noItemMessage: I wonder what these numbers mean...
 --- !u!61 &188744303
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -336,13 +339,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 223632963}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 168b372a932bd194c87910e1a413d777, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f3172ae0f8524ac5b03824937fe73b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   onInteractEvent:
     m_PersistentCalls:
       m_Calls: []
   isInteractable: 1
+  interactionMessage: There doesn't seem to be anything here...
+  requiredItem: {fileID: 11400000, guid: bf0781002b72a423c91f4bfa07e3220a, type: 2}
+  noItemMessage: I wonder what these numbers mean...
 --- !u!61 &223632966
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -369,6 +375,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6952193, y: 0.5058526}
   m_EdgeRadius: 0
+--- !u!4 &283659886 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8960573552582434713, guid: e526ce21822da3f4d8ef94db760f04ae, type: 3}
+  m_PrefabInstance: {fileID: 810476441888806285}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &378063327
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -488,13 +499,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 475251849}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 168b372a932bd194c87910e1a413d777, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f3172ae0f8524ac5b03824937fe73b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   onInteractEvent:
     m_PersistentCalls:
       m_Calls: []
   isInteractable: 1
+  interactionMessage: There doesn't seem to be anything here...
+  requiredItem: {fileID: 11400000, guid: bf0781002b72a423c91f4bfa07e3220a, type: 2}
+  noItemMessage: I wonder what these numbers mean...
 --- !u!61 &475251852
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -602,13 +616,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 572485943}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 168b372a932bd194c87910e1a413d777, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f3172ae0f8524ac5b03824937fe73b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   onInteractEvent:
     m_PersistentCalls:
       m_Calls: []
   isInteractable: 1
+  interactionMessage: There doesn't seem to be anything here...
+  requiredItem: {fileID: 11400000, guid: bf0781002b72a423c91f4bfa07e3220a, type: 2}
+  noItemMessage: I wonder what these numbers mean...
 --- !u!61 &572485946
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -676,13 +693,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 639493197}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 168b372a932bd194c87910e1a413d777, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f3172ae0f8524ac5b03824937fe73b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   onInteractEvent:
     m_PersistentCalls:
       m_Calls: []
   isInteractable: 1
+  interactionMessage: There doesn't seem to be anything here...
+  requiredItem: {fileID: 11400000, guid: bf0781002b72a423c91f4bfa07e3220a, type: 2}
+  noItemMessage: I wonder what these numbers mean...
 --- !u!61 &639493200
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -823,13 +843,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 815002431}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 168b372a932bd194c87910e1a413d777, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f3172ae0f8524ac5b03824937fe73b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   onInteractEvent:
     m_PersistentCalls:
       m_Calls: []
   isInteractable: 1
+  interactionMessage: There doesn't seem to be anything here...
+  requiredItem: {fileID: 11400000, guid: bf0781002b72a423c91f4bfa07e3220a, type: 2}
+  noItemMessage: I wonder what these numbers mean...
 --- !u!61 &815002434
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -929,140 +952,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e526ce21822da3f4d8ef94db760f04ae, type: 3}
---- !u!1 &979540178
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 979540179}
-  - component: {fileID: 979540181}
-  - component: {fileID: 979540180}
-  m_Layer: 5
-  m_Name: Text (TMP)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &979540179
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 979540178}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1515172336}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 417.5}
-  m_SizeDelta: {x: -400, y: -865}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &979540180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 979540178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: I don't think there's anything i can do here right now...
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 10ff9cbdf92db42e7ba03a7b62700817, type: 2}
-  m_sharedMaterial: {fileID: 2542039164319844092, guid: 10ff9cbdf92db42e7ba03a7b62700817, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 75
-  m_fontSizeBase: 75
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 20
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &979540181
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 979540178}
-  m_CullTransparentMesh: 1
 --- !u!4 &1084748893 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8960573552582434713, guid: e526ce21822da3f4d8ef94db760f04ae, type: 3}
@@ -1134,75 +1023,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1139108178
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1139108179}
-  - component: {fileID: 1139108181}
-  - component: {fileID: 1139108180}
-  m_Layer: 5
-  m_Name: Notification Window
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1139108179
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1139108178}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1515172336}
-  m_Father: {fileID: 6313121936201783029}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -50}
-  m_SizeDelta: {x: 0, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &1139108180
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1139108178}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d20c5e4b82bd442dab60289d882017d3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!225 &1139108181
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1139108178}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &1262102969 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4870199478722519268, guid: e526ce21822da3f4d8ef94db760f04ae, type: 3}
@@ -1249,13 +1069,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1275957257}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 168b372a932bd194c87910e1a413d777, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f3172ae0f8524ac5b03824937fe73b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   onInteractEvent:
     m_PersistentCalls:
       m_Calls: []
   isInteractable: 1
+  interactionMessage: There doesn't seem to be anything here...
+  requiredItem: {fileID: 11400000, guid: bf0781002b72a423c91f4bfa07e3220a, type: 2}
+  noItemMessage: I wonder what these numbers mean...
 --- !u!61 &1275957260
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1323,13 +1146,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1281863113}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 168b372a932bd194c87910e1a413d777, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f3172ae0f8524ac5b03824937fe73b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   onInteractEvent:
     m_PersistentCalls:
       m_Calls: []
   isInteractable: 1
+  interactionMessage: There doesn't seem to be anything here...
+  requiredItem: {fileID: 11400000, guid: bf0781002b72a423c91f4bfa07e3220a, type: 2}
+  noItemMessage: I wonder what these numbers mean...
 --- !u!61 &1281863116
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1500,13 +1326,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1467099227}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 168b372a932bd194c87910e1a413d777, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f3172ae0f8524ac5b03824937fe73b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   onInteractEvent:
     m_PersistentCalls:
       m_Calls: []
   isInteractable: 1
+  interactionMessage: There doesn't seem to be anything here...
+  requiredItem: {fileID: 11400000, guid: bf0781002b72a423c91f4bfa07e3220a, type: 2}
+  noItemMessage: I wonder what these numbers mean...
 --- !u!61 &1467099230
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1533,7 +1362,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6952193, y: 0.5058526}
   m_EdgeRadius: 0
---- !u!1 &1515172335
+--- !u!1 &1470182671
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1541,74 +1370,66 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1515172336}
-  - component: {fileID: 1515172338}
-  - component: {fileID: 1515172337}
-  m_Layer: 5
-  m_Name: BG
+  - component: {fileID: 1470182672}
+  - component: {fileID: 1470182674}
+  - component: {fileID: 1470182673}
+  m_Layer: 0
+  m_Name: Incorrect Brick (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1515172336
-RectTransform:
+--- !u!4 &1470182672
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1515172335}
+  m_GameObject: {fileID: 1470182671}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.03, y: -0.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 979540179}
-  m_Father: {fileID: 1139108179}
-  m_RootOrder: 0
+  m_Children: []
+  m_Father: {fileID: 283659886}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -637.9546}
-  m_SizeDelta: {x: 0, y: 1275}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1515172337
+--- !u!58 &1470182673
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470182671}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.25
+--- !u!114 &1470182674
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1515172335}
+  m_GameObject: {fileID: 1470182671}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f3172ae0f8524ac5b03824937fe73b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.7490196}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
+  onInteractEvent:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0bf392d25843947d1b4311dc56db66fe, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1515172338
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1515172335}
-  m_CullTransparentMesh: 1
+  isInteractable: 1
+  interactionMessage: Yes!! I'm free!!
+  requiredItem: {fileID: 11400000, guid: bf0781002b72a423c91f4bfa07e3220a, type: 2}
+  noItemMessage: I don't have any way to get through this lock - if only I could
+    find a ey...
 --- !u!1 &1599216158 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4870199478722519268, guid: e526ce21822da3f4d8ef94db760f04ae, type: 3}
@@ -1655,13 +1476,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1608306421}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 168b372a932bd194c87910e1a413d777, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f3172ae0f8524ac5b03824937fe73b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   onInteractEvent:
     m_PersistentCalls:
       m_Calls: []
   isInteractable: 1
+  interactionMessage: There doesn't seem to be anything here...
+  requiredItem: {fileID: 11400000, guid: bf0781002b72a423c91f4bfa07e3220a, type: 2}
+  noItemMessage: I wonder what these numbers mean...
 --- !u!61 &1608306424
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1847,13 +1671,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1797779326}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 168b372a932bd194c87910e1a413d777, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f3172ae0f8524ac5b03824937fe73b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   onInteractEvent:
     m_PersistentCalls:
       m_Calls: []
   isInteractable: 1
+  interactionMessage: There doesn't seem to be anything here...
+  requiredItem: {fileID: 11400000, guid: bf0781002b72a423c91f4bfa07e3220a, type: 2}
+  noItemMessage: I wonder what these numbers mean...
 --- !u!61 &1797779329
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1996,13 +1823,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1962181322}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 168b372a932bd194c87910e1a413d777, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f3172ae0f8524ac5b03824937fe73b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   onInteractEvent:
     m_PersistentCalls:
       m_Calls: []
   isInteractable: 1
+  interactionMessage: There doesn't seem to be anything here...
+  requiredItem: {fileID: 11400000, guid: bf0781002b72a423c91f4bfa07e3220a, type: 2}
+  noItemMessage: I wonder what these numbers mean...
 --- !u!61 &1962181325
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2070,25 +1900,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 2021281786}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 168b372a932bd194c87910e1a413d777, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f3172ae0f8524ac5b03824937fe73b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   onInteractEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2021281788}
-        m_TargetAssemblyTypeName: Interactable, Assembly-CSharp
-        m_MethodName: SetInteractable
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   isInteractable: 1
+  interactionMessage: There's a wordsearch hidden behind this brick! What word am
+    I looking for though
+  requiredItem: {fileID: 11400000, guid: bf0781002b72a423c91f4bfa07e3220a, type: 2}
+  noItemMessage: I wonder what these numbers mean...
 --- !u!61 &2021281789
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2156,13 +1978,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 2047123835}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 168b372a932bd194c87910e1a413d777, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f3172ae0f8524ac5b03824937fe73b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   onInteractEvent:
     m_PersistentCalls:
       m_Calls: []
   isInteractable: 1
+  interactionMessage: There doesn't seem to be anything here...
+  requiredItem: {fileID: 11400000, guid: bf0781002b72a423c91f4bfa07e3220a, type: 2}
+  noItemMessage: I wonder what these numbers mean...
 --- !u!61 &2047123838
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2230,13 +2055,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 2103270482}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 168b372a932bd194c87910e1a413d777, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f3172ae0f8524ac5b03824937fe73b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   onInteractEvent:
     m_PersistentCalls:
       m_Calls: []
   isInteractable: 1
+  interactionMessage: There doesn't seem to be anything here...
+  requiredItem: {fileID: 11400000, guid: bf0781002b72a423c91f4bfa07e3220a, type: 2}
+  noItemMessage: I wonder what these numbers mean...
 --- !u!61 &2103270485
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2343,6 +2171,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 84577386, guid: a408a86e2a23f48c5b90f01a322c0119, type: 3}
+      propertyPath: m_Color.a
+      value: 0.9019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 908830715, guid: a408a86e2a23f48c5b90f01a322c0119, type: 3}
+      propertyPath: testItem
+      value: 
+      objectReference: {fileID: 11400000, guid: bf0781002b72a423c91f4bfa07e3220a, type: 2}
+    - target: {fileID: 1802544083, guid: a408a86e2a23f48c5b90f01a322c0119, type: 3}
+      propertyPath: m_Transition
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1802544083, guid: a408a86e2a23f48c5b90f01a322c0119, type: 3}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1802544084, guid: a408a86e2a23f48c5b90f01a322c0119, type: 3}
+      propertyPath: m_Color.a
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2141794657, guid: a408a86e2a23f48c5b90f01a322c0119, type: 3}
+      propertyPath: m_Color.a
+      value: 0.5019608
+      objectReference: {fileID: 0}
     - target: {fileID: 514690133242111619, guid: a408a86e2a23f48c5b90f01a322c0119, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2521,8 +2373,3 @@ PrefabInstance:
       objectReference: {fileID: 1458819715}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a408a86e2a23f48c5b90f01a322c0119, type: 3}
---- !u!224 &6313121936201783029 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 1448914426, guid: a408a86e2a23f48c5b90f01a322c0119, type: 3}
-  m_PrefabInstance: {fileID: 6313121936201783028}
-  m_PrefabAsset: {fileID: 0}
