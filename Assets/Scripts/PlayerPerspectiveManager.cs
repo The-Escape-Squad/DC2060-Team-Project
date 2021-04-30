@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SceneSwitcher : MonoBehaviour
+public class PlayerPerspectiveManager : MonoBehaviour
 {
     public GameObject[] cameras;
     private int index;
