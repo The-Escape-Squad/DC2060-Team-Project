@@ -71,7 +71,7 @@ public class MazeRotation : MonoBehaviour
 
     void Start()
     {
-        _sensitivity = 0.1f;
+        _sensitivity = 0.4f;
         _rotation = Vector3.zero;
     }
 
@@ -87,7 +87,7 @@ public class MazeRotation : MonoBehaviour
 
             // apply rotation
             _rotation.z = -(_mouseOffset.x + _mouseOffset.y) * _sensitivity;
-            _rotation.z = Mathf.Clamp(_rotation.z, -5, 5);
+            //_rotation.z = Mathf.Clamp(_rotation.z, -5, 5);
 
             // rotate
             transform.Rotate(_rotation);
