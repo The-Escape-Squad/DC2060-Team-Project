@@ -11,6 +11,8 @@ public class Interactable : MonoBehaviour
 
     public string interactionMessage;
 
+    public AudioClip interactionClip;
+
     public void OnMouseDown()
     {
         if(isInteractable)
@@ -21,6 +23,7 @@ public class Interactable : MonoBehaviour
 
     protected virtual void OnInteract()
     {
+        if (interactionClip) GameManager.Instance.audioManager.PlaySoundOneShot(interactionClip);
         Player.Instance.notificationWindow.DisplayMessage(interactionMessage);
         onInteractEvent?.Invoke();
     }

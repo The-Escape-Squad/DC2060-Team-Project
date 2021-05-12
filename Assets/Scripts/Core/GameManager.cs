@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public AudioManager audioManager;
+
     public void Awake()
     {
         // Set Up Game Manager Singleton
