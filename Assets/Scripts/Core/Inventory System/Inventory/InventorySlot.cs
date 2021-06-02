@@ -12,6 +12,7 @@ public class InventorySlot : MonoBehaviour, IPointerExitHandler, IPointerEnterHa
     public Image itemSlot;
     public Image selectedIndicator;
     private ItemSO myItem;
+    public AudioClip hoverOverClip;
 
     public void Init(Inventory inventory)
     {
@@ -75,6 +76,7 @@ public class InventorySlot : MonoBehaviour, IPointerExitHandler, IPointerEnterHa
         {
             inventory.UpdateTooltip("No Item");
         }
+        GameManager.Instance.audioManager.PlaySoundOneShot(hoverOverClip);
         selectedIndicator.enabled = true;
     }
 

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c7593cef1ddf4b76a818282d655d85d, type: 3}
   m_Name: Cell Key
   m_EditorClassIdentifier: 
-  itemName: Cell Door Key
-  itemDescription: The key for the cell door - I'm free!
+  itemName: Lockpicking Set
+  itemDescription: A set of lockpicks - I can use these to get through the cell door
   itemGraphic: {fileID: 21300000, guid: be7ad9aa1030e48dabd158e430aa1e7f, type: 3}

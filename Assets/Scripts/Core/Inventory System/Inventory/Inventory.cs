@@ -9,7 +9,6 @@ public class Inventory : MonoBehaviour
     [Header("References")]
     public InventorySlot[] slots;
     public Animator uiAnimator;
-    public AudioSource inventoryAudioSource;
 
     public TextMeshProUGUI tooltipTitle;
     public TextMeshProUGUI tooltipDescription;
@@ -43,7 +42,7 @@ public class Inventory : MonoBehaviour
     {
         state = !state;
         uiAnimator.SetBool("Open", state);
-        inventoryAudioSource.PlayOneShot(state ? inventoryOpenSound : inventoryCloseSound);
+        GameManager.Instance.audioManager.PlaySoundOneShot(state ? inventoryOpenSound : inventoryCloseSound);
     }
 
     public void UpdateTooltip(string itemName, string itemDescription = "")
