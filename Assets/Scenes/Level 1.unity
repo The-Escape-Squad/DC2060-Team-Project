@@ -1824,7 +1824,7 @@ MonoBehaviour:
         m_MethodName: AddItem
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 740ea50df409b4e20bf7e058a3119ee4, type: 2}
+          m_ObjectArgument: {fileID: 11400000, guid: d43f2dd5e220648058f4212de4344153, type: 2}
           m_ObjectArgumentAssemblyTypeName: ItemSO, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2676,6 +2676,7 @@ GameObject:
   - component: {fileID: 1470182672}
   - component: {fileID: 1470182674}
   - component: {fileID: 1470182673}
+  - component: {fileID: 1470182675}
   m_Layer: 0
   m_Name: Lock
   m_TagString: Untagged
@@ -2740,13 +2741,46 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 6313121936201783030}
+      - m_Target: {fileID: 1405067192}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  isInteractable: 1
+  interactionMessage: Great! Now I just need to pick this lock...
+  interactionClip: {fileID: 0}
+  requiredItem: {fileID: 0}
+  noItemMessage: I don't have any way to get through this lock - if only I could
+    find a key...
+--- !u!114 &1470182675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470182671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c882ca6a1ffd4504b508db1bf5658f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteractEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1798635366}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2767,7 +2801,8 @@ MonoBehaviour:
   isInteractable: 1
   interactionMessage: Great! Now I just need to pick this lock...
   interactionClip: {fileID: 0}
-  requiredItem: {fileID: 11400000, guid: 740ea50df409b4e20bf7e058a3119ee4, type: 2}
+  requiredItem: {fileID: 11400000, guid: d43f2dd5e220648058f4212de4344153, type: 2}
+  wrongItemMessage: I can't use this here...
   noItemMessage: I don't have any way to get through this lock - if only I could
     find a key...
 --- !u!1 &1472512081
@@ -4091,6 +4126,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6952193, y: 0.5058526}
   m_EdgeRadius: 0
+--- !u!114 &1975640422 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 934564480, guid: a408a86e2a23f48c5b90f01a322c0119, type: 3}
+  m_PrefabInstance: {fileID: 6313121936201783028}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2021281786
 GameObject:
   m_ObjectHideFlags: 0
@@ -4505,45 +4551,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1448914425, guid: a408a86e2a23f48c5b90f01a322c0119, type: 3}
-      propertyPath: m_SortingOrder
-      value: 10
+    - target: {fileID: 934564478, guid: a408a86e2a23f48c5b90f01a322c0119, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 166739020104596049, guid: a408a86e2a23f48c5b90f01a322c0119, type: 3}
-      propertyPath: hoverOverClip
-      value: 
-      objectReference: {fileID: 8300000, guid: cb27ddffb23814af19af1952feb3cdf8, type: 3}
-    - target: {fileID: 496377625462341034, guid: a408a86e2a23f48c5b90f01a322c0119, type: 3}
-      propertyPath: hoverOverClip
-      value: 
-      objectReference: {fileID: 8300000, guid: cb27ddffb23814af19af1952feb3cdf8, type: 3}
-    - target: {fileID: 496377626115870927, guid: a408a86e2a23f48c5b90f01a322c0119, type: 3}
-      propertyPath: hoverOverClip
-      value: 
-      objectReference: {fileID: 8300000, guid: cb27ddffb23814af19af1952feb3cdf8, type: 3}
-    - target: {fileID: 496377626228876825, guid: a408a86e2a23f48c5b90f01a322c0119, type: 3}
-      propertyPath: hoverOverClip
-      value: 
-      objectReference: {fileID: 8300000, guid: cb27ddffb23814af19af1952feb3cdf8, type: 3}
-    - target: {fileID: 496377626320734055, guid: a408a86e2a23f48c5b90f01a322c0119, type: 3}
-      propertyPath: hoverOverClip
-      value: 
-      objectReference: {fileID: 8300000, guid: cb27ddffb23814af19af1952feb3cdf8, type: 3}
-    - target: {fileID: 496377626923872924, guid: a408a86e2a23f48c5b90f01a322c0119, type: 3}
-      propertyPath: hoverOverClip
-      value: 
-      objectReference: {fileID: 8300000, guid: cb27ddffb23814af19af1952feb3cdf8, type: 3}
-    - target: {fileID: 496377626947951980, guid: a408a86e2a23f48c5b90f01a322c0119, type: 3}
-      propertyPath: hoverOverClip
-      value: 
-      objectReference: {fileID: 8300000, guid: cb27ddffb23814af19af1952feb3cdf8, type: 3}
+    - target: {fileID: 934564480, guid: a408a86e2a23f48c5b90f01a322c0119, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 514690133242111619, guid: a408a86e2a23f48c5b90f01a322c0119, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 514690133242111619, guid: a408a86e2a23f48c5b90f01a322c0119, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 790941768678384970, guid: a408a86e2a23f48c5b90f01a322c0119, type: 3}
       propertyPath: m_RootOrder
@@ -4702,10 +4720,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6313121934765598625, guid: a408a86e2a23f48c5b90f01a322c0119, type: 3}
-      propertyPath: blinkAnimator
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6313121934765598625, guid: a408a86e2a23f48c5b90f01a322c0119, type: 3}
       propertyPath: cameras.Array.data[0]
       value: 
       objectReference: {fileID: 1599216158}
@@ -4721,6 +4735,10 @@ PrefabInstance:
       propertyPath: cameras.Array.data[3]
       value: 
       objectReference: {fileID: 1458819715}
+    - target: {fileID: 6313121936201783032, guid: a408a86e2a23f48c5b90f01a322c0119, type: 3}
+      propertyPath: selectedItemImage
+      value: 
+      objectReference: {fileID: 1975640422}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a408a86e2a23f48c5b90f01a322c0119, type: 3}
 --- !u!114 &6313121936201783029 stripped
@@ -4734,8 +4752,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf9dc58f9ea714d5b9ea696418460129, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &6313121936201783030 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 514690133242111619, guid: a408a86e2a23f48c5b90f01a322c0119, type: 3}
-  m_PrefabInstance: {fileID: 6313121936201783028}
-  m_PrefabAsset: {fileID: 0}
