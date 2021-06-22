@@ -12,7 +12,7 @@ public class InventorySlot : MonoBehaviour, IPointerExitHandler, IPointerEnterHa
     private Inventory inventory;
     public Image itemSlot;
     public Image selectedIndicator;
-    private ItemSO myItem;
+    [SerializeField] private ItemSO myItem;
     public AudioClip hoverOverClip;
 
     [Header("Item Usage")]
@@ -34,8 +34,9 @@ public class InventorySlot : MonoBehaviour, IPointerExitHandler, IPointerEnterHa
     {
         this.inventory = inventory;
         itemSlot.sprite = null;
-        myItem = null;
         selectedIndicator.enabled = false;
+        // Updates visuals with item on Initialisation
+        UpdateItem(myItem);
     }
 
     public void UpdateItem(ItemSO newItem)
@@ -109,8 +110,8 @@ public class InventorySlot : MonoBehaviour, IPointerExitHandler, IPointerEnterHa
             if (hit)
             {
                 Debug.Log("Hit Something");
-                DragInteractable interactable;
-                if((interactable = hit.transform.GetComponent<DragInteractable>()) != null)
+                IDragInteractable interactable;
+                if((interactable = hit.transform.GetComponent<IDragInteractable>()) != null)
                 {
                     Debug.Log("Interacting");
                     interactable.UseItem(myItem);
