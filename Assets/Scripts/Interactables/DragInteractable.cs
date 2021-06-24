@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DragInteractable : Interactable
+public class DragInteractable : Interactable, IDragInteractable
 {
     public ItemSO requiredItem;
     public string wrongItemMessage = "I can't use this here...";

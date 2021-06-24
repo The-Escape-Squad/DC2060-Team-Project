@@ -85,4 +85,13 @@ public class Inventory : MonoBehaviour
         return -1;
     }
 
+    public int RemoveItem(ItemSO item)
+    {
+        int itemIndex = -1;
+        if((itemIndex = HasItem(item)) != -1) {
+            slots[itemIndex].UpdateItem(null);
+        }
+        return itemIndex;
+    }
+
 }
