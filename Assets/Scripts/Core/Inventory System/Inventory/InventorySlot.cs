@@ -1,25 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class InventorySlot : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler, IPointerClickHandler
+public class InventorySlot : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler, IPointerClickHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
 
     [Header("References")]
     private Inventory inventory;
     public Image itemSlot;
     public Image selectedIndicator;
-    private ItemSO myItem;
+    [SerializeField] private ItemSO myItem;
     public AudioClip hoverOverClip;
+
+    [Header("Item Usage")]
+    private bool holdingItem;
+
+    public class ItemUsageData
+    {
+        public Vector2 mousePosition;
+        public ItemSO usedItem;
+
+        public ItemUsageData(Vector2 mousePosition, ItemSO usedItem)
+        {
+            this.mousePosition = mousePosition;
+            this.usedItem = usedItem;
+        }
+    }
 
     public void Init(Inventory inventory)
     {
         this.inventory = inventory;
         itemSlot.sprite = null;
-        myItem = null;
         selectedIndicator.enabled = false;
+        // Updates visuals with item on Initialisation
+        UpdateItem(myItem);
     }
 
     public void UpdateItem(ItemSO newItem)
@@ -62,9 +79,6 @@ public class InventorySlot : MonoBehaviour, IPointerExitHandler, IPointerEnterHa
         {
             Debug.Log("There's no item to use here...");
         }
-
-        // TODO - Create a system for the Player by which it can be assigned a
-        // current item to use
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -86,4 +100,47 @@ public class InventorySlot : MonoBehaviour, IPointerExitHandler, IPointerEnterHa
         selectedIndicator.enabled = false;
     }
 
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        Debug.Log("Ending Drag");
+        if (holdingItem)
+        {
+            // Perform a raycast to see if we hit an interactable that takes items
+            RaycastHit2D hit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Input.mousePosition));
+            if (hit)
+            {
+                Debug.Log("Hit Something");
+                IDragInteractable interactable;
+                if((interactable = hit.transform.GetComponent<IDragInteractable>()) != null)
+                {
+                    Debug.Log("Interacting");
+                    interactable.UseItem(myItem);
+                }
+            }
+            ActiveItemTracker.Instance.UpdateSelectedItem(null);
+        }
+    }
+
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        Debug.Log("Trying Drag");
+        if(myItem != null)
+        {
+            Debug.Log("Has Item");
+            // If there is an item in this slot and the item is usable, we want
+            // to assign it to the ActiveItemTracker and set the icon to follow
+            if(myItem is UsableItemSO usableItem)
+            {
+                Debug.Log("Item is Draggable, performing drag");
+                ActiveItemTracker.Instance.UpdateSelectedItem(usableItem);
+                holdingItem = true;
+            }
+        }
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        // Do nothing, required for drag support but nothing
+        // needs doing here
+    }
 }
