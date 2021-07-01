@@ -1,78 +1,89 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Wire : MonoBehaviour
 {
-    public SpriteRenderer wireEnd;
+
+    [Header("Wire Data")]
+    public Color wireColor;
+    [Range(0, 2)]
+    public int wireMatchIndex;
+    public bool canInteract = true;
+
+    [Header("References")]
+    public LineRenderer wire;
+    public SpriteRenderer wireSocket;
     public GameObject lightOn;
-    Vector3 startPoint;
+    public GameObject wireTip;
     Vector3 startPosition;
+
     // Start is called before the first frame update
     void Start()
     {
-        startPoint = transform.position;
         startPosition = transform.position;
+        wire.SetPosition(0, transform.position);
+        wire.SetPosition(1, transform.position);
+        wire.startColor = wireColor;
+        wire.endColor = wireColor;
+        wireSocket.color = wireColor;
     }
 
     private void OnMouseDrag()
     {
-        // mouse position
-        Vector3 newPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        newPosition.z = 0;
-
-        // check connection points
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(newPosition, .2f);
-        foreach (Collider2D collider in colliders)
+        if(canInteract)
         {
-            if (collider.gameObject != gameObject)
+            // Get mouse position
+            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 newPosition = mousePosition;
+            newPosition.z = 0;
+
+            // Check for connection points
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(mousePosition, .2f);
+            foreach (Collider2D collider in colliders)
             {
-                UpdateWire(collider.transform.position);
-
-                // check wires match
-                if(transform.parent.name.Equals(collider.transform.parent.name))
+                Wire newWire;
+                if ((newWire = collider.GetComponent<Wire>()) != null)
                 {
-                    // count connection
-                    Main.Instance.SwitchChange(1);
+                    if (newWire != this && newWire.wireMatchIndex == this.wireMatchIndex)
+                    {
+                        // count connection
+                        WireManager.Instance.SwitchChange(1);
 
-                    collider.GetComponent<Wire>()?.Done();
-                    Done();
-                } 
-
-                return;
+                        newWire.Done();
+                        Done();
+                        newPosition = newWire.transform.position;
+                    }
+                }
             }
-        }
 
-        UpdateWire(newPosition);
+            UpdateWire(newPosition);
+        }
     }
 
     void Done()
     {
         // turn on light
         lightOn.SetActive(true);
-
-        // disable
-        Destroy(this);
+        canInteract = false;
     }
 
     private void OnMouseUp()
     {
-        UpdateWire(startPosition);
-
+        if(canInteract)
+        {
+            UpdateWire(startPosition);
+        }
     }
+
     void UpdateWire(Vector3 newPosition)
     {
+        // Update the wire size
+        wire.SetPosition(1, newPosition);
 
-        // update wire and update position 
-        transform.position = newPosition;
-
-        // update position 
-        Vector3 direction = newPosition - startPoint;
-        // update position on right side 
-        transform.right = direction * transform.lossyScale.x;
-
-        // update scale
-        float distance = Vector2.Distance(startPoint, newPosition);
-        wireEnd.size = new Vector2(distance, wireEnd.size.y);
+        // Update position and rotation of the tip
+        wireTip.transform.position = newPosition;
+        wireTip.transform.right = newPosition - startPosition;
     }
 }
