@@ -81,6 +81,7 @@ public class Wire : MonoBehaviour
     {
         // Update the wire size
         wire.SetPosition(1, newPosition);
+        wire.SetPosition(0, transform.position);
 
         // Update position and rotation of the tip
         wireTip.transform.position = newPosition;

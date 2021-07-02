@@ -4,74 +4,39 @@ using UnityEngine;
 
 public class Pipe : MonoBehaviour
 {
-    float[] rotations = { 0, 90, 180, 270 };
 
-    public float[] correctRotation;
-    [SerializeField]
-    bool isPlaced = false;
+    [Header("References")]
+    public bool isConnected;
+    public SpriteRenderer pipeRenderer;
+    public Transform[] connectionPoints;
+    public LayerMask connectionsLayer;
 
-    int PossibleRots = 1;
+    [Header("Pipe Data")]
+    public Color connectedColour;
+    public Color disconnectedColour;
+    public List<Pipe> connections = new List<Pipe>();
 
-    PipePuzzleManager pipeManager;
-
-    private void Awake()
+    public void UpdateConnections()
     {
-        pipeManager = FindObjectOfType<PipePuzzleManager>();
-    }
-
-    private void Start()
-    {
-        PossibleRots = correctRotation.Length;
-        int rand = Random.Range(0, rotations.Length);
-        transform.eulerAngles = new Vector3(0, 0, rotations[rand]);
-
-        if (PossibleRots > 1)
+        connections.Clear();
+        foreach(Transform connectionPoint in connectionPoints)
         {
-            if (transform.eulerAngles.z == correctRotation[0] || transform.eulerAngles.z == correctRotation[1])
+            RaycastHit2D[] hits = Physics2D.RaycastAll(connectionPoint.transform.position, connectionPoint.transform.up, 0.1f, connectionsLayer);
+            foreach(RaycastHit2D hit in hits)
             {
-                isPlaced = true;
-                pipeManager.correctMove();
-            }
-        }
-        else
-        {
-            if (transform.eulerAngles.z == correctRotation[0])
-            {
-                isPlaced = true;
-                pipeManager.correctMove();
+                if (hit && hit.transform != this.transform)
+                {
+                    Debug.Log("Hit Adjacent Pipe");
+                    connections.Add(hit.transform.GetComponent<Pipe>());
+                }
             }
         }
     }
 
-    private void OnMouseDown()
+    public void UpdateState(bool hasWaterConnection)
     {
-        transform.Rotate(new Vector3(0, 0, 90));
-
-        if (PossibleRots > 1)
-        {
-            if (transform.eulerAngles.z == correctRotation[0] || transform.eulerAngles.z == correctRotation[1] && isPlaced == false)
-            {
-                isPlaced = true;
-                pipeManager.correctMove();
-            }
-            else if (isPlaced == true)
-            {
-                isPlaced = false;
-                pipeManager.wrongMove();
-            }
-        }
-        else
-        {
-            if (transform.eulerAngles.z == correctRotation[0] && isPlaced == false)
-            {
-                isPlaced = true;
-                pipeManager.correctMove();
-            }
-            else if (isPlaced == true)
-            {
-                isPlaced = false;
-                pipeManager.wrongMove();
-            }
-        }
+        isConnected = hasWaterConnection;
+        pipeRenderer.color = isConnected ? connectedColour : disconnectedColour;
     }
+
 }
