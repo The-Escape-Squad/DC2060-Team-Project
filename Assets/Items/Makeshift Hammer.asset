@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Makeshift Hammer
   itemDescription: A bar of soap rammed onto the end of a wooden spoon... Fantastic
-  itemGraphic: {fileID: 21300000, guid: ee35a08ea8a73964aa6006c082a7240d, type: 3}
+  itemGraphic: {fileID: 21300000, guid: 9c274e6a25aad4ba98ab040a57e75844, type: 3}

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Wooden Spoon
   itemDescription: A simple wooden spoon - could be useful for something
-  itemGraphic: {fileID: 21300000, guid: 2fb543cec4c978341b82482247d5a7f6, type: 3}
+  itemGraphic: {fileID: 21300000, guid: eabeb6ecb466544e787650b3ba4eae84, type: 3}
