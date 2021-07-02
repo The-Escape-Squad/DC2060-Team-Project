@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CraftingSystem : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class CraftingSystem : MonoBehaviour
     public CraftingSlot[] slots;
 
     public string successMessage;
+    public UnityEvent successfulCraftEvent;
 
     public void TryCraft()
     {
@@ -46,6 +48,7 @@ public class CraftingSystem : MonoBehaviour
             }
             Player.Instance.playerInventory.AddItem(recipe.result);
             Player.Instance.notificationWindow.DisplayMessage(successMessage);
+            successfulCraftEvent?.Invoke();
         } else
         {
             // Message for failure

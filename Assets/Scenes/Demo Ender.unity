@@ -272,7 +272,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 2305238
+    rgba: 4280495318
   m_fontColor: {r: 0.83921576, g: 0.17254902, b: 0.13725491, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -409,7 +409,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -732,11 +732,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'THANK YOU FOR PLAYING THE
+  m_text: 'THANK YOU FOR PLAYING
 
-    ESCAPE: BEHIND BARS
-
-    DEMO'
+    ESCAPE: BEHIND BARS'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 10ff9cbdf92db42e7ba03a7b62700817, type: 2}
   m_sharedMaterial: {fileID: 2542039164319844092, guid: 10ff9cbdf92db42e7ba03a7b62700817, type: 2}
@@ -745,7 +743,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 15592941
+    rgba: 4293783021
   m_fontColor: {r: 0.929, g: 0.929, b: 0.929, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3

@@ -56,7 +56,8 @@ public class PipePuzzleManager : MonoBehaviour {
         {
             // The puzzle is complete
             Debug.Log("Puzzle Complete");
-            //Player.Instance.playerInventory.AddItem(rewardItem);
+            Player.Instance.playerInventory.AddItem(rewardItem);
+            Player.Instance.notificationWindow.DisplayMessage("A blue wire came up in the water...");
             puzzleCompletionEvent?.Invoke();
         }
 

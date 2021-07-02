@@ -85,6 +85,11 @@ public class Inventory : MonoBehaviour
         return -1;
     }
 
+    public void RemoveItemVoid(ItemSO item)
+    {
+        RemoveItem(item);
+    }
+
     public int RemoveItem(ItemSO item)
     {
         int itemIndex = -1;
