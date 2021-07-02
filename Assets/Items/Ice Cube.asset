@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba0e85ed25a1445158b2f509bb47081f, type: 3}
-  m_Name: Makeshift Hammer
+  m_Name: Ice Cube
   m_EditorClassIdentifier: 
-  itemName: Makeshift Hammer
-  itemDescription: A bar of soap rammed onto the end of a wooden spoon... Fantastic
-  itemGraphic: {fileID: 21300000, guid: 9c274e6a25aad4ba98ab040a57e75844, type: 3}
+  itemName: Ice Cube
+  itemDescription: A cube of ice
+  itemGraphic: {fileID: 21300000, guid: 4f5d0fc484a37614a9b55134f879dd87, type: 3}

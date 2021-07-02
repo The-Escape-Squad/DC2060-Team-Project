@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Soap Bar
   itemDescription: A bar of soap... I wonder who dropped this...
-  itemGraphic: {fileID: 21300000, guid: 7c636d734110d444bb6bce25123d989f, type: 3}
+  itemGraphic: {fileID: 21300000, guid: fa52e70e6c9c0d640abc473d438535b6, type: 3}

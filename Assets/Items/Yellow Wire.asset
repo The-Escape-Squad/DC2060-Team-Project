@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba0e85ed25a1445158b2f509bb47081f, type: 3}
-  m_Name: Wooden Spoon
+  m_Script: {fileID: 11500000, guid: 3c7593cef1ddf4b76a818282d655d85d, type: 3}
+  m_Name: Yellow Wire
   m_EditorClassIdentifier: 
-  itemName: Wooden Spoon
-  itemDescription: A simple wooden spoon - could be useful for something
-  itemGraphic: {fileID: 21300000, guid: eabeb6ecb466544e787650b3ba4eae84, type: 3}
+  itemName: Yellow Wire
+  itemDescription: Yellow wire to be collected in order to finish the level
+  itemGraphic: {fileID: 21300000, guid: b03fb11c257cf4849b20cb08ec9002c2, type: 3}
