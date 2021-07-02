@@ -9,6 +9,6 @@ public class Switch : MonoBehaviour
     private void onMouseUp()
     {
         // if statement
-        Main.Instance.SwitchChange(isOn ? 1 : -1);
+        WireManager.Instance.SwitchChange(isOn ? 1 : -1);
     }
 }
